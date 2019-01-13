@@ -14,11 +14,13 @@
             s = today.getSeconds();
         m = checktime(m);
         s = checktime(s);
-        document.getElementById('relogio').innerHTML= h + ":" + m + ":" + s;
+        document.getElementById('txt').innerHTML = 
+        h + ":" + m + ":" + s;
         var t = setTimeout(showClock, 500);
     }
     function checktime(i){
         if (i<10) {i = "0" + i};
+        return i;
     }
 </script>
 <body onload="showClock()">
@@ -27,14 +29,12 @@
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-12">
                     <h1>Relógio</h1>
-                    <div id="relogio">
-                        aqui: 
-                    </div>
-                    <h2>Apenas um relógio latinoamericano sem lítio no bolso</h2>
+                    <div id="txt"></div>
+                    <p>Apenas um relógio latinoamericano sem lítio no bolso</p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-6 col-lg-offset-3">
+                <div class="fixed-bottom">
                     <p class="Copyright">&copy;2019 <a href="https://lucas.pub" target="_blank">Lucas Renan</a>
                         Featured snippets are <a href="https://opensource.org/licenses/MIT">MIT license.</a>
                     </p>
